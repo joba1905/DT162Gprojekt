@@ -283,4 +283,18 @@ article:nth-child(3n+0) {
 i {
   vertical-align: middle;
 }
+
+@media only screen and (max-width: 700px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .add, .list {
+    width: 90%;
+  }
+
+  article {
+    width: 90%;
+  }
+}
 </style>
