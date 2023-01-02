@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+  font-family: 'Indie Flower', cursive;
+}
+
+body {
+  height: 100vh;
+  background-image: url("paper.jpg");
+  background-size: 100%;
+  background-repeat: repeat;
+}
