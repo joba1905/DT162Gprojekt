@@ -11,6 +11,7 @@ export default {
     }
   },
   methods: {
+    //Hämta alla poster med Fetch API
     async getPosts() {
 
       await fetch("http://localhost:3000/posts/")
@@ -20,6 +21,7 @@ export default {
         })
     },
 
+    //Skapa ny post
     async newPost() {
 
       var newpost = {
@@ -42,12 +44,14 @@ export default {
       this.getPosts();
     },
 
+    //Radera post med id och läs in på nytt
     async deletePost(_id) {
       fetch("http://localhost:3000/posts/" + _id, {method: "DELETE"})
 
       this.getPosts();
     },
 
+    //Aktivera redigeringsläge
     editPost(_id, postTitle, postText) {
       this.editmode = true;
       this._id = _id;
@@ -55,12 +59,14 @@ export default {
       this.text = postText;
     },
 
+    //Avslutar redigeringsläge
     cancelEdit() {
       this.editmode = false;
       this.title = "";
       this.text = "";
     },
 
+    //Uppdatera specifik post med id
     async updatePost(_id) {
 
       this.editmode = false;
